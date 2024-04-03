@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.btn {
+  @apply bg-gray-200 hover:bg-gray-100 border-gray-200 hover:border-gray-100 text-gray-500 disabled:bg-gray-50 disabled:border-gray-50 disabled:text-gray-200 !important
+}
+.btn-green {
+  @apply bg-green-500 hover:bg-green-400 border-green-500 hover:border-green-400 text-white disabled:bg-green-200 disabled:border-green-200  !important
+}
+
+.btn-blue {
+  @apply bg-blue-500 hover:bg-blue-400 border-blue-500 hover:border-blue-400 text-white disabled:bg-blue-200 disabled:border-blue-200  !important
+}
+
+.btn-red {
+  @apply bg-red-400 hover:bg-red-200 border-red-400 hover:border-red-200 text-white disabled:bg-red-200 disabled:border-red-200 !important
+}
+
+.btn-orange {
+  @apply bg-orange-400 hover:bg-orange-200 border-orange-400 hover:border-orange-200 text-white disabled:bg-orange-200 disabled:border-orange-200  !important
+}
+
+/*解决antd与tailwind css冲突*/
+/*@layer base {*/
+/*  button, [type='button'], [type='reset'], [type='submit']*/
+/*  {*/
+/*    background-color: #3b82f6;*/
+/*  }*/
+/*}*/
+/*解决antd与tailwind css冲突*/
+:global(.ant-btn-primary) {
+  background-color: #1677ff !important;
+}
+
+/*ck编辑器高度设置*/
+.ck-editor__editable_inline:not(.ck-comment__input *) {
+  height: 300px;
+  overflow-y: auto;
+}
